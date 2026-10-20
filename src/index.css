@@ -574,6 +574,29 @@ p:last-child { margin-bottom: 0; }
   outline: 2px solid rgba(201, 163, 90, 0.45);
   border-color: var(--gold);
 }
+.phone-field {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e4dccb;
+  border-radius: 10px;
+  background: #fff;
+}
+.phone-field:focus-within {
+  outline: 2px solid rgba(201, 163, 90, 0.45);
+  border-color: var(--gold);
+}
+.phone-prefix {
+  padding-left: 0.8rem;
+  font-weight: 600;
+  user-select: none;
+}
+.enquiry .phone-field input {
+  border: 0;
+  border-radius: 10px;
+  min-width: 0;
+  flex: 1;
+}
+.enquiry .phone-field input:focus { outline: none; }
 .quote-copy h2 { font-size: clamp(1.7rem, 3vw, 2.5rem); line-height: 1.2; }
 .quote-phones { display: flex; flex-direction: column; gap: 0.2rem; font-weight: 700; }
 .quote-phones a { text-decoration: none; }
