@@ -11,8 +11,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-brand">
-        <Logo size={168} wordmark />
-        <p className="tagline">.Design .Fabricate .Inspire</p>
+        <Logo size={220} alt="Pergola Masters.in — Design, Fabricate, Inspire" />
         <p>
           Pergola Masters.in is a leading name in premium pergola manufacturing and outdoor
           fabrication solutions, delivering excellence through precision, quality, and innovation.
