@@ -26,7 +26,7 @@ const reasons = [
 export default function About() {
   return (
     <>
-      <PageHero title="About Us" crumb="About" image="/images/kitchen-outdoor.jpg" />
+      <PageHero title="About Us" crumb="About" image="/images/work/red-tile-roof.jpg" />
 
       <section className="hex-panel">
         <div className="container about-copy">
@@ -86,7 +86,7 @@ export default function About() {
       <section className="why">
         <div className="container why-grid">
           <div className="why-visual">
-            <img src="/images/gazebo.jpg" alt="Architectural metal screen façade" />
+            <img src="/images/work/garden-gazebo.jpg" alt="Garden gazebo with a shingle roof and built-in benches" />
             <div className="call-card">
               <span>Call Us</span>
               <a href="tel:+918971738777">{PHONE_PRIMARY.replace(/\s/g, "")}</a>

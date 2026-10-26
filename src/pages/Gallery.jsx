@@ -15,7 +15,7 @@ export default function Gallery() {
 
   return (
     <>
-      <PageHero title="Gallery" crumb="Gallery" image="/images/gallery/garden-gazebo.jpg" />
+      <PageHero title="Gallery" crumb="Gallery" image="/images/work/red-tile-roof.jpg" />
       <section className="gallery-page">
         <div className="container">
           <div className="section-kicker light">PERGOLA MASTERS.IN</div>

@@ -5,7 +5,7 @@ import { PHONE_PRIMARY, PHONE_SECONDARY } from "../data.js";
 export default function Quote() {
   return (
     <>
-      <PageHero title="Get a Quote" crumb="Get a Quote" image="/images/luxury.jpg" />
+      <PageHero title="Get a Quote" crumb="Get a Quote" image="/images/work/deck-gazebo.jpg" />
       <section className="contact-page">
         <div className="container quote-layout">
           <div className="quote-copy">

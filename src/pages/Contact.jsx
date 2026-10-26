@@ -6,7 +6,7 @@ import { ADDRESS, EMAIL, EMAIL_ALT, PHONE_PRIMARY, PHONE_SECONDARY } from "../da
 export default function Contact() {
   return (
     <>
-      <PageHero title="Contact" crumb="Contact" image="/images/night.jpg" />
+      <PageHero title="Contact" crumb="Contact" image="/images/work/led-louver-terrace.jpg" />
       <section className="contact-page">
         <div className="container contact-grid">
           <div className="contact-cards">
