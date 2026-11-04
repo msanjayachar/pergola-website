@@ -1,15 +1,12 @@
-import { COMPANY } from "../data.js";
-
 export default function PageHero({ title, crumb, image }) {
   return (
-    <section className="page-hero">
-      <div className="page-hero-copy">
-        <p>
-          {COMPANY} / {crumb}
-        </p>
+    <section className="page-hero" style={{ backgroundImage: `url(${image})` }}>
+      <div className="container page-hero-copy">
         <h1>{title}</h1>
+        <p>
+          PERGOLA MASTERS.IN <span>-</span> {crumb}
+        </p>
       </div>
-      <img src={image} alt="" />
     </section>
   );
 }

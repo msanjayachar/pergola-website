@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { IconPhone, IconWhatsApp } from "./Icons.jsx";
-import { COMPANY, PHONE_TEL, WHATSAPP } from "../data.js";
+import { PHONE_TEL, WHATSAPP } from "../data.js";
 
 export default function FloatingBar() {
   return (
     <div className="floating-bar">
-      <a className="float-btn phone" href={PHONE_TEL} aria-label={`Call ${COMPANY}`}>
+      <a className="float-btn phone" href={PHONE_TEL} aria-label="Call Pergola Masters">
         <IconPhone />
       </a>
       <Link className="float-contact" to="/contact">
@@ -16,7 +16,7 @@ export default function FloatingBar() {
         href={WHATSAPP}
         target="_blank"
         rel="noreferrer"
-        aria-label={`WhatsApp ${COMPANY}`}
+        aria-label="WhatsApp Pergola Masters"
       >
         <IconWhatsApp />
       </a>

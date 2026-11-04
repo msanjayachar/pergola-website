@@ -15,7 +15,7 @@ export default function ServicePage() {
       <section className="service-page">
         <div className="container service-layout">
           <article>
-            <p className="kicker">{service.nav}</p>
+            <div className="section-kicker">{service.nav}</div>
             <h2>{service.title}</h2>
             <p className="lede">{service.lead}</p>
             {service.extra && <p>{service.extra}</p>}
@@ -45,13 +45,13 @@ export default function ServicePage() {
                 </ul>
               </>
             )}
-            <Link to="/get-a-quote" className="btn ink">
+            <Link to="/get-a-quote" className="btn-gold">
               Get a Quote
             </Link>
           </article>
           <aside className="service-aside">
             <img src={service.image} alt="" />
-            <div className="aside-card">
+            <div>
               <h3>Start This Project</h3>
               <p>{service.summary}</p>
               <Link to="/contact">Talk to Us</Link>

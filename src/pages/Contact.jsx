@@ -1,12 +1,12 @@
 import EnquiryForm from "../components/EnquiryForm.jsx";
 import PageHero from "../components/PageHero.jsx";
 import { IconMail, IconPhone, IconPin } from "../components/Icons.jsx";
-import { ADDRESS, COMPANY, EMAIL, EMAIL_ALT, featured, PHONE_PRIMARY, PHONE_SECONDARY } from "../data.js";
+import { ADDRESS, EMAIL, EMAIL_ALT, PHONE_PRIMARY, PHONE_SECONDARY } from "../data.js";
 
 export default function Contact() {
   return (
     <>
-      <PageHero title="Contact" crumb="Contact" image={featured.contact} />
+      <PageHero title="Contact" crumb="Contact" image="/images/work/led-louver-terrace.jpg" />
       <section className="contact-page">
         <div className="container contact-grid">
           <div className="contact-cards">
@@ -14,7 +14,6 @@ export default function Contact() {
               <IconPin />
               <h2>Our Office Address</h2>
               <p>{ADDRESS}</p>
-              <p className="address-note">This line is a placeholder until the workshop address is confirmed.</p>
             </article>
             <article>
               <IconPhone />
@@ -36,12 +35,13 @@ export default function Contact() {
                 <a href={`mailto:${EMAIL_ALT}`}>{EMAIL_ALT}</a>
               </p>
             </article>
-            <article>
-              <h2>Map</h2>
-              <p className="address-note">
-                The map for {COMPANY} will go here once the address is updated.
-              </p>
-            </article>
+            <div className="map-frame">
+              <iframe
+                title="Pergola Masters office in Whitefield, Bengaluru"
+                src="https://maps.google.com/maps?q=Immadihalli%20Main%20Road%20Whitefield%20Bengaluru&z=15&output=embed"
+                loading="lazy"
+              />
+            </div>
           </div>
           <EnquiryForm heading="Send a Message" submitLabel="Contact Now" />
         </div>
