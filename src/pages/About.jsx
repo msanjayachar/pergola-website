@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CtaBand from "../components/CtaBand.jsx";
 import PageHero from "../components/PageHero.jsx";
 import { IconChevron } from "../components/Icons.jsx";
-import { PHONE_PRIMARY, processSteps } from "../data.js";
+import { COMPANY, featured, PHONE_PRIMARY, processSteps } from "../data.js";
 
 const reasons = [
   {
@@ -26,18 +26,18 @@ const reasons = [
 export default function About() {
   return (
     <>
-      <PageHero title="About Us" crumb="About" image="/images/work/red-tile-roof.jpg" />
+      <PageHero title="About Us" crumb="About" image={featured.about} />
 
       <section className="hex-panel">
         <div className="container about-copy">
-          <div className="section-kicker">About Us</div>
+          <p className="kicker">About Us</p>
           <h2>
             Engineering Excellence.
             <br />
             Delivering Quality.
           </h2>
           <p>
-            Welcome to Pergola Masters.in, a name trusted by thousands of clients, architects,
+            Welcome to {COMPANY}, a name trusted by clients, architects,
             engineers, builders, and developers for exceptional fabrication solutions. We are
             committed to delivering precision-driven results where quality and excellence come
             together.
@@ -49,7 +49,7 @@ export default function About() {
             durable, high-quality structures.
           </p>
           <p>
-            At Pergola Masters.in, quality and reliability are at the core of everything we do. From
+            At {COMPANY}, quality and reliability are at the core of everything we do. From
             initial concept and design to final execution, every stage is carried out with meticulous
             attention to detail and uncompromising standards.
           </p>
@@ -86,14 +86,14 @@ export default function About() {
       <section className="why">
         <div className="container why-grid">
           <div className="why-visual">
-            <img src="/images/work/garden-gazebo.jpg" alt="Garden gazebo with a shingle roof and built-in benches" />
+            <img src={featured.craft} alt="Embossed ceiling panels on a finished canopy" />
             <div className="call-card">
               <span>Call Us</span>
               <a href="tel:+918971738777">{PHONE_PRIMARY.replace(/\s/g, "")}</a>
             </div>
           </div>
           <div>
-            <div className="section-kicker">Why Choose Us</div>
+            <p className="kicker">Why Choose Us</p>
             <h2>Excellence in Pergolas & Outdoor Makeovers</h2>
             <ul className="reason-list">
               {reasons.map((reason) => (
@@ -108,18 +108,18 @@ export default function About() {
                 </li>
               ))}
             </ul>
-            <Link to="/get-a-quote" className="btn-gold">
+            <Link to="/get-a-quote" className="btn ink">
               Get a Quote
             </Link>
           </div>
         </div>
       </section>
 
-      <section className="dark-block">
+      <section className="band iron">
         <div className="container">
-          <div className="section-kicker">The process</div>
-          <h2 className="light-title">Four stages. One accountable team.</h2>
-          <div className="steps">
+          <p className="kicker">The process</p>
+          <h2>Four stages. One accountable team.</h2>
+          <div className="step-row">
             {processSteps.map((step, index) => (
               <article key={step.title} className="step-card">
                 <span>0{index + 1}</span>

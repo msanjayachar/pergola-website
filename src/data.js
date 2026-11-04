@@ -1,3 +1,4 @@
+export const COMPANY = "MS Pergola Fabrications";
 export const PHONE_PRIMARY = "+91 8971738777";
 export const PHONE_SECONDARY = "+91 7676408187";
 export const PHONE_TEL = "tel:+918971738777";
@@ -5,8 +6,12 @@ export const PHONE_TEL_2 = "tel:+917676408187";
 export const WHATSAPP = "https://wa.me/918971738777";
 export const EMAIL = "info@pergolamasters.in";
 export const EMAIL_ALT = "pergolamasters769@gmail.com";
-export const ADDRESS =
-  "4th Floor, M K Arcade, 42/8, 43, Immadihalli Main Road, Whitefield, Nagondanahalli, Bengaluru, Karnataka 560066";
+export const ADDRESS = "[Company address — update this line]";
+
+export const workImages = Array.from(
+  { length: 115 },
+  (_, index) => `/works/work-${String(index + 1).padStart(3, "0")}.jpg`,
+);
 
 export const nav = [
   { label: "Home", to: "/" },
@@ -108,7 +113,7 @@ export const services = [
     slug: "pergola",
     nav: "Pergolas",
     title: "Pergolas",
-    image: "/images/work/glass-patio-pergola.jpg",
+    image: "/works/work-003.jpg",
     summary:
       "A pergola is a stylish outdoor structure designed to provide shade and comfort while enhancing the aesthetic appeal of gardens, patios, terraces, and outdoor living spaces.",
     lead: "Pergolas are a popular addition to any property, enhancing beauty, functionality, and character while allowing you to enjoy outdoor living to the fullest. Designed with vertical pillars that support a roof-like framework of crossbeams, they are commonly installed in gardens, patios, and other outdoor areas to create a shaded, welcoming space for relaxation, entertaining, dining, or hosting gatherings.",
@@ -154,7 +159,7 @@ export const services = [
     slug: "extension",
     nav: "Extensions",
     title: "Extension",
-    image: "/images/work/glass-corridor.jpg",
+    image: "/works/work-052.jpg",
     summary:
       "Structural overhangs designed to shield your home from harsh sunlight and rain while enhancing exterior aesthetics. They improve comfort and provide weather protection.",
     lead: "Designed to keep your home comfortable and protected, our extensions block driving rain and harsh sunlight while adding a stylish touch to the exterior. They bring together elegance and practicality, with covers crafted for windows, doors, corridors, and side yards.",
@@ -186,7 +191,7 @@ export const services = [
     slug: "privacy-structures",
     nav: "Privacy Structures",
     title: "Privacy Structures",
-    image: "/images/work/garden-gazebo.jpg",
+    image: "/works/work-053.jpg",
     summary:
       "Stylish lattice, precision metal CNC panels, and durable jali bricks crafted to enhance privacy, airflow, security, and architectural elegance for residential and commercial spaces.",
     lead: "From PVC lattice to precision CNC screens and jali bricks, our privacy structures balance ventilation, partial privacy, and security without sealing off the façade.",
@@ -222,7 +227,7 @@ export const services = [
     slug: "automation-gates-rolling-shutters",
     nav: "Automation Gates & Rolling Shutters",
     title: "Automation Gates & Rolling Shutters",
-    image: "/images/work/glass-canopy-install.jpg",
+    image: "/works/work-048.jpg",
     summary:
       "Advanced, durable, and secure access solutions offering smooth operation, enhanced safety, and long-lasting performance.",
     lead: "Enhance security, convenience, and architectural appeal with automation gates and rolling shutters. Premium-grade materials, heavy-duty metal frameworks, and high-performance motors deliver smooth operation, remote access, sensor integration, and advanced locking.",
@@ -267,7 +272,7 @@ export const services = [
     slug: "ceilings",
     nav: "Ceiling",
     title: "Ceilings",
-    image: "/images/work/led-louver-terrace.jpg",
+    image: "/works/work-050.jpg",
     summary:
       "Stylish and durable ceiling solutions designed to enhance interior aesthetics while providing structural strength, insulation, and a refined finish for residential and commercial spaces.",
     lead: "Upgrade interiors and exteriors with VOX, ACP, and HPL ceilings. Each system is planned to complement the space while improving insulation, protection, and finish — for homes, villas, showrooms, offices, and industrial units.",
@@ -311,7 +316,7 @@ export const services = [
     slug: "metal-railings-doors",
     nav: "Metal Railings & Doors",
     title: "Metal Railings & Doors",
-    image: "/images/work/brick-glass-canopy.jpg",
+    image: "/works/work-055.jpg",
     summary:
       "Durable and stylish metal railings and doors designed for safety, security, and enhanced architectural appeal.",
     lead: "We combine robust structural engineering with refined design for residential, commercial, and industrial spaces. High-grade certified metal, precision fabrication, and powder finishes protect against rust, wear, and weather.",
@@ -337,7 +342,7 @@ export const services = [
     slug: "safety-grills",
     nav: "Safety Grills",
     title: "Safety Grills",
-    image: "/images/work/wood-glass-roof.jpg",
+    image: "/works/work-057.jpg",
     summary:
       "Strong and durable grills designed to enhance security while maintaining ventilation and aesthetic appeal for homes and commercial spaces.",
     lead: "Premium-grade metal and advanced welding deliver strength and long-term performance. Anti-corrosion coatings and powder finishes keep grills rust-resistant with minimal maintenance.",
@@ -368,61 +373,38 @@ export const services = [
   },
 ];
 
-export const gallery = [
-  { src: "/images/work/glass-patio-pergola.jpg", alt: "Glass-roof pergola over an outdoor dining patio" },
-  { src: "/images/work/brick-glass-canopy.jpg", alt: "Glass canopy over a terrace beside a brick house" },
-  { src: "/images/work/led-louver-terrace.jpg", alt: "Louvered terrace roof with linear lighting" },
-  { src: "/images/work/glass-corridor.jpg", alt: "Glass roof over a corridor between rooms" },
-  { src: "/images/work/red-tile-roof.jpg", alt: "Red tile roof on a black steel pergola frame" },
-  { src: "/images/work/wood-glass-roof.jpg", alt: "Wood-framed glass roof over a paved terrace" },
-  { src: "/images/work/glass-canopy-install.jpg", alt: "Installing glass panels on a metal canopy frame" },
-  { src: "/images/work/garden-gazebo.jpg", alt: "Garden gazebo with a shingle roof and built-in benches" },
-  { src: "/images/work/deck-gazebo.jpg", alt: "Deck gazebo with a shingle roof and outdoor dining set" },
-  { src: "/images/gallery/garden-gazebo.jpg", alt: "Lit garden gazebo with a tiled roof and black steel frame" },
-  { src: "/images/gallery/green-wall.jpg", alt: "Balcony finished with a planted green wall under a wood-look ceiling" },
-  { src: "/images/gallery/glass-terrace.jpg", alt: "Finished terrace room with a glass roof and black-framed glazing" },
-  { src: "/images/gallery/terracotta-underside.jpg", alt: "Terracotta tile roof seen from below on a black steel frame" },
-  { src: "/images/gallery/courtyard-glass.jpg", alt: "Glass courtyard roof with a black steel grid and ceiling fan" },
-  { src: "/images/gallery/gable-porch.jpg", alt: "White steel gable porch with a red tile roof" },
-  { src: "/images/gallery/balcony-railing.jpg", alt: "Balcony with a criss-cross steel railing and wood-look soffit" },
-  { src: "/images/gallery/cnc-ceiling.jpg", alt: "CNC-cut metal ceiling panels in a timber frame" },
-  { src: "/images/gallery/turf-wall.jpg", alt: "Balcony wall covered in artificial turf beneath a slatted canopy" },
-  { src: "/images/gallery/balcony-canopy.jpg", alt: "Balcony shade canopy with a criss-cross railing" },
-  { src: "/images/gallery/diamond-lattice.jpg", alt: "Cream diamond lattice screen with hanging plants" },
-  { src: "/images/gallery/terracotta-roof.jpg", alt: "Terracotta roof tiles laid over a rooftop structure" },
-  { src: "/images/gallery/patterned-tile-roof.jpg", alt: "Patterned terracotta ceiling tiles on a black pergola frame" },
-  { src: "/images/gallery/sheet-roof-lattice.jpg", alt: "Terrace canopy with a corrugated roof and lattice privacy screen" },
-  { src: "/images/gallery/sheet-roof-wide.jpg", alt: "Wide terrace canopy on black steel posts" },
-  { src: "/images/gallery/tiled-pergola.jpg", alt: "Rooftop pergola with a red tile roof on a black frame" },
-  { src: "/images/gallery/steel-pergola-frame.jpg", alt: "Open steel pergola frame on a rooftop terrace" },
-  { src: "/images/gallery/pergola-frame-wide.jpg", alt: "Wide steel pergola frame beside a rooftop room" },
-  { src: "/images/gallery/cnc-ceiling-install.jpg", alt: "Installing a CNC-cut metal ceiling" },
-  { src: "/images/gallery/glass-terrace-install.jpg", alt: "Glazing a terrace room under a glass roof" },
-  { src: "/images/gallery/welding-roof-frame.jpg", alt: "Welding a steel roof frame on a terrace" },
-  { src: "/images/gallery/welding-canopy.jpg", alt: "Welding the steel grid of a terrace canopy" },
-  { src: "/images/gallery/louvered-terrace.jpg", alt: "Fitting glazing in a terrace with a louvered roof" },
-  { src: "/images/gallery/glass-room.jpg", alt: "Glass-walled rooftop room under construction" },
-  { src: "/images/gallery/bay-window.jpg", alt: "Projecting bay window and balcony railing on an apartment block" },
-  { src: "/images/gallery/canopy-install.jpg", alt: "Fixing the edge of a balcony canopy" },
+const siteFirst = [
+  "/works/work-003.jpg",
+  "/works/work-059.jpg",
+  "/works/work-040.jpg",
+  "/works/work-053.jpg",
+  "/works/work-004.jpg",
+  "/works/work-055.jpg",
+  "/works/work-048.jpg",
+  "/works/work-050.jpg",
+  "/works/work-052.jpg",
+  "/works/work-057.jpg",
+  "/works/work-085.jpg",
+  "/works/work-024.jpg",
 ];
 
-export const heroSlides = [
-  {
-    image: "/images/work/glass-patio-pergola.jpg",
-    title: "Redefine Your Outdoor Experience",
-    text: "From pergolas to lattice and custom structures, we create functional, elegant spaces that enhance your lifestyle.",
-  },
-  {
-    image: "/images/work/brick-glass-canopy.jpg",
-    title: "Design. Fabricate. Inspire.",
-    text: "Premium pergolas, CNC screens, and outdoor fabrication crafted for Bangalore homes, terraces, and landscapes.",
-  },
-  {
-    image: "/images/work/led-louver-terrace.jpg",
-    title: "Shade, Strength, and Finish",
-    text: "Custom structures engineered for durability, then installed with a flawless handover.",
-  },
-];
+export const featured = {
+  hero: ["/works/work-003.jpg", "/works/work-040.jpg", "/works/work-053.jpg"],
+  intro: "/works/work-059.jpg",
+  about: "/works/work-024.jpg",
+  craft: "/works/work-050.jpg",
+  gallery: "/works/work-040.jpg",
+  contact: "/works/work-055.jpg",
+  quote: "/works/work-048.jpg",
+  teaser: siteFirst.slice(0, 8),
+};
+
+export const gallery = [...siteFirst, ...workImages.filter((src) => !siteFirst.includes(src))].map(
+  (src, index) => ({
+    src,
+    alt: `${COMPANY} project ${index + 1}`,
+  }),
+);
 
 export function serviceBySlug(slug) {
   return services.find((service) => service.slug === slug);

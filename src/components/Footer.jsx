@@ -1,39 +1,25 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo.jsx";
-import { IconInstagram, IconMail, IconPhone, IconPin } from "./Icons.jsx";
-import { ADDRESS, EMAIL, nav, PHONE_PRIMARY, PHONE_SECONDARY } from "../data.js";
+import { ADDRESS, COMPANY, EMAIL, EMAIL_ALT, nav, PHONE_PRIMARY, PHONE_SECONDARY } from "../data.js";
 
-const menuLinks = nav.flatMap((item) =>
-  item.children ? [{ label: item.label, to: item.children[0].to }, ...item.children] : [item],
-);
+const menuLinks = nav.flatMap((item) => (item.children ? item.children : [item]));
 
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div className="container footer-brand">
-        <Logo size={220} alt="Pergola Masters.in — Design, Fabricate, Inspire" />
-        <p>
-          Pergola Masters.in is a leading name in premium pergola manufacturing and outdoor
-          fabrication solutions, delivering excellence through precision, quality, and innovation.
-          With years of expertise and a dedicated team of skilled professionals, we specialize in
-          designing and fabricating customized pergolas, lattice structures, CNC works, and landscape
-          enhancements that elevate outdoor living spaces.
-        </p>
-        <a
-          className="ig"
-          href="https://www.instagram.com/"
-          target="_blank"
-          rel="noreferrer"
-          aria-label="Instagram"
-        >
-          <IconInstagram />
-        </a>
+      <div className="container footer-top">
+        <Logo size={120} alt={`${COMPANY} logo`} />
+        <div>
+          <h2 style={{ textTransform: "uppercase", letterSpacing: "0.04em" }}>{COMPANY}</h2>
+          <p>
+            A fabrication workshop for pergolas, lattice, CNC screens, gates, ceilings, and outdoor
+            structures. Design, steelwork, and installation stay with one team.
+          </p>
+        </div>
       </div>
-
       <div className="container footer-grid">
         <div>
-          <h2>Our Menu</h2>
-          <span className="gold-rule" />
+          <h2>Work</h2>
           <ul>
             {menuLinks.map((item) => (
               <li key={`${item.label}-${item.to}`}>
@@ -43,29 +29,25 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h2>Get In Touch</h2>
-          <span className="gold-rule" />
-          <ul className="contact-list">
+          <h2>Contact</h2>
+          <ul>
+            <li>{ADDRESS}</li>
             <li>
-              <IconPin />
-              <span>{ADDRESS}</span>
+              <a href="tel:+918971738777">{PHONE_PRIMARY}</a>
             </li>
             <li>
-              <IconPhone />
-              <span>
-                <a href="tel:+918971738777">{PHONE_PRIMARY}</a>,{" "}
-                <a href="tel:+917676408187">{PHONE_SECONDARY}</a>
-              </span>
+              <a href="tel:+917676408187">{PHONE_SECONDARY}</a>
             </li>
             <li>
-              <IconMail />
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            </li>
+            <li>
+              <a href={`mailto:${EMAIL_ALT}`}>{EMAIL_ALT}</a>
             </li>
           </ul>
         </div>
       </div>
-
-      <p className="copyright">© 2026 Pergola Masters.in. All rights reserved.</p>
+      <p className="container copyright">© 2026 {COMPANY}. All rights reserved.</p>
     </footer>
   );
 }

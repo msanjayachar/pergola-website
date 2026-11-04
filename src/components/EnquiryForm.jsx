@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { services, WHATSAPP } from "../data.js";
+import { COMPANY, services, WHATSAPP } from "../data.js";
 
 export default function EnquiryForm({ heading = "Send a Message", submitLabel = "Submit" }) {
   const [sent, setSent] = useState(false);
@@ -10,7 +10,7 @@ export default function EnquiryForm({ heading = "Send a Message", submitLabel = 
     const city = String(data.get("city") || "").trim();
     const localPhone = String(data.get("phone") || "").trim().replace(/^\+91\s*/, "");
     const lines = [
-      "New enquiry from the Pergola Masters website",
+      `New enquiry from the ${COMPANY} website`,
       "",
       `Name: ${data.get("name")}`,
       `Phone: +91 ${localPhone}`,
@@ -28,8 +28,8 @@ export default function EnquiryForm({ heading = "Send a Message", submitLabel = 
     return (
       <div className="form-success" role="status">
         <h3>WhatsApp is open.</h3>
-        <p>Your enquiry is filled in. Tap Send in WhatsApp to deliver it to Pergola Masters.</p>
-        <button type="button" className="btn-gold" onClick={() => setSent(false)}>
+        <p>Your enquiry is filled in. Tap Send in WhatsApp to deliver it to {COMPANY}.</p>
+        <button type="button" className="btn ink" onClick={() => setSent(false)}>
           Send another message
         </button>
       </div>
@@ -78,7 +78,7 @@ export default function EnquiryForm({ heading = "Send a Message", submitLabel = 
         Message
         <textarea name="message" rows="5" required placeholder="Tell us about the space and what you need." />
       </label>
-      <button className="btn-gold" type="submit">
+      <button className="btn ink" type="submit">
         {submitLabel}
       </button>
     </form>

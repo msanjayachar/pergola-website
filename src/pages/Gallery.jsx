@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import PageHero from "../components/PageHero.jsx";
-import { gallery } from "../data.js";
+import { COMPANY, featured, gallery } from "../data.js";
 
 export default function Gallery() {
   const [active, setActive] = useState(null);
@@ -15,16 +15,16 @@ export default function Gallery() {
 
   return (
     <>
-      <PageHero title="Gallery" crumb="Gallery" image="/images/work/red-tile-roof.jpg" />
-      <section className="gallery-page">
+      <PageHero title="Gallery" crumb="Gallery" image={featured.gallery} />
+      <section className="band">
         <div className="container">
-          <div className="section-kicker light">PERGOLA MASTERS.IN</div>
-          <h2>Gallery</h2>
+          <p className="kicker">{COMPANY}</p>
+          <h2>The work.</h2>
           <p>
-            Pergolas, glass roofs, lattice, CNC ceilings, railings, and terrace structures from
-            work we have designed and fabricated.
+            Pergolas, roofs, lattice, CNC screens, railings, and terrace structures from the
+            workshop and the sites.
           </p>
-          <div className="gallery-grid">
+          <div className="gallery-mosaic">
             {gallery.map((item) => (
               <figure key={item.src}>
                 <button type="button" onClick={() => setActive(item)}>
